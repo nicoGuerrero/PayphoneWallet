@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayphoneWallet", "PayphoneWallet\PayphoneWallet.csproj", "{C81D3157-DED0-4F21-B7D6-262C2BC03C48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayphoneWallet.Core", "PayphoneWallet.Core\PayphoneWallet.Core.csproj", "{771A5DEB-153B-451D-9B1D-D07641EFC3B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayphoneWallet.Data", "PayphoneWallet.Data\PayphoneWallet.Data.csproj", "{2AA3717C-0C31-4C91-ADCE-FC2EF97D5314}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayphoneWallet.Service", "PayphoneWallet.Service\PayphoneWallet.Service.csproj", "{931CDDCB-34AA-4169-881F-A901AA06DCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Tests", "PayphoneWallet.Tests\PayphoneWallet.Tests.csproj", "{48CA0788-2429-41CC-A2DA-88231F8F455B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C81D3157-DED0-4F21-B7D6-262C2BC03C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81D3157-DED0-4F21-B7D6-262C2BC03C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81D3157-DED0-4F21-B7D6-262C2BC03C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81D3157-DED0-4F21-B7D6-262C2BC03C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771A5DEB-153B-451D-9B1D-D07641EFC3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771A5DEB-153B-451D-9B1D-D07641EFC3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771A5DEB-153B-451D-9B1D-D07641EFC3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771A5DEB-153B-451D-9B1D-D07641EFC3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AA3717C-0C31-4C91-ADCE-FC2EF97D5314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA3717C-0C31-4C91-ADCE-FC2EF97D5314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA3717C-0C31-4C91-ADCE-FC2EF97D5314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA3717C-0C31-4C91-ADCE-FC2EF97D5314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931CDDCB-34AA-4169-881F-A901AA06DCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931CDDCB-34AA-4169-881F-A901AA06DCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931CDDCB-34AA-4169-881F-A901AA06DCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931CDDCB-34AA-4169-881F-A901AA06DCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CA0788-2429-41CC-A2DA-88231F8F455B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CA0788-2429-41CC-A2DA-88231F8F455B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CA0788-2429-41CC-A2DA-88231F8F455B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CA0788-2429-41CC-A2DA-88231F8F455B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B74C3C9-6129-403F-9F0C-10330F8C97CB}
+	EndGlobalSection
+EndGlobal
