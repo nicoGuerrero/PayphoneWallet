@@ -37,8 +37,8 @@ namespace PayphoneWallet.Tests
 
 			_walletRepositoryMock.Verify(x => x.UpdateAsync(fromWallet), Times.Once);
 			_walletRepositoryMock.Verify(x => x.UpdateAsync(toWallet), Times.Once);
-			_transactionRepositoryMock.Verify(x => x.AddAsync(It.Is<Transaction>(t => t.Type == "Debit" && t.Amount == 30)), Times.Once);
-			_transactionRepositoryMock.Verify(x => x.AddAsync(It.Is<Transaction>(t => t.Type == "Credit" && t.Amount == 30)), Times.Once);
+			_transactionRepositoryMock.Verify(x => x.AddAsync(It.Is<Transaction>(t => t.Type == "Debito" && t.Amount == 30)), Times.Once);
+			_transactionRepositoryMock.Verify(x => x.AddAsync(It.Is<Transaction>(t => t.Type == "Credito" && t.Amount == 30)), Times.Once);
 		}
 
 		[Fact]
