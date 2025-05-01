@@ -6,5 +6,6 @@ namespace PayphoneWallet.ViewModels
 	{
 		public required string Name { get; set; }
 		public required decimal Balance { get; set; }
+
 	}
 }
