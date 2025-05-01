@@ -13,6 +13,16 @@ namespace PayphoneWallet.Service
 			_walletRepository = walletRepository;
 		}
 
+		public async Task<IEnumerable<Wallet>> GetAllAsync()
+		{
+			return await _walletRepository.GetAllAsync();
+		}
+
+		public async Task<Wallet?> GetByIdAsync(int id)
+		{
+			return await _walletRepository.GetByIdAsync(id);
+		}
+
 		public async Task CreateAsync(string documentId, string name)
 		{
 			var wallet = new Wallet
@@ -27,10 +37,20 @@ namespace PayphoneWallet.Service
 			await _walletRepository.AddAsync(wallet);
 		}
 
-		public async Task<Wallet?> GetByIdAsync(int id)
+		public async Task UpdateAsync(int id, string name, decimal balance)
 		{
-			return await _walletRepository.GetByIdAsync(id);
+			var wallet = await _walletRepository.GetByIdAsync(id);
+			if (wallet == null) throw new InvalidOperationException("Billetera no encontrada.");
+
+			wallet.Name = name;
+			wallet.Balance = balance;
+			wallet.UpdatedAt = DateTime.UtcNow;
+			await _walletRepository.UpdateAsync(wallet);
 		}
 
+		public async Task DeleteAsync(int id)
+		{
+			await _walletRepository.DeleteAsync(id);
+		}
 	}
 }

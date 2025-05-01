@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PayphoneWallet.Core.Models;
 using PayphoneWallet.Service.Contracts;
 using PayphoneWallet.ViewModels;
 
@@ -18,17 +20,11 @@ namespace PayphoneWallet.Controllers
 			_transactionService = transactionService;
 		}
 
+		// GET: api/Wallet
 		[HttpGet]
-		public IEnumerable<string> Get()
+		public async Task<IEnumerable<Wallet>> GetWallets()
 		{
-			return new string[] { "value1", "value2" };
-		}
-
-		[HttpPost]
-		public async Task<IActionResult> Create([FromBody] CreateWalletRequest request)
-		{
-			await _walletService.CreateAsync(request.DocumentId, request.Name);
-			return Ok("Billetera creada");
+			return await _walletService.GetAllAsync();
 		}
 
 		[HttpGet("{id}")]
@@ -39,23 +35,32 @@ namespace PayphoneWallet.Controllers
 		}
 
 
-
-		// POST api/<ValuesController>
 		[HttpPost]
-		public void Post([FromBody] string value)
+		public async Task<IActionResult> Create([FromBody] CreateWalletRequest request)
 		{
+			await _walletService.CreateAsync(request.DocumentId, request.Name);
+			return Ok("Billetera Creada.");
 		}
 
-		// PUT api/<ValuesController>/5
 		[HttpPut("{id}")]
-		public void Put(int id, [FromBody] string value)
+		public async Task<IActionResult> Update(int id, [FromBody] UpdateWalletRequest request)
 		{
+			try
+			{
+				await _walletService.UpdateAsync(id, request.Name, request.Balance);
+				return Ok("Billetera Modificada.");
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.Message);
+			}
 		}
 
-		// DELETE api/<ValuesController>/5
 		[HttpDelete("{id}")]
-		public void Delete(int id)
+		public async Task<IActionResult> Delete(int id)
 		{
+			await _walletService.DeleteAsync(id);
+			return Ok("Billetera Eliminada.");
 		}
 	}
 }
